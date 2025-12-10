@@ -17,7 +17,17 @@ export const crearReto = async (req, res) => {
       data: { titulo, descripcion, imagen },
     });
   } catch (error) {
-    console.error("❌ Error al crear reto:", error);
+    console.error("Error al crear reto:", error);
     res.status(500).json({ error: error.message });
+  }
+};
+
+export const obtenerRetos = async (req, res) => {
+  try {
+    const [rows] = await db.query("SELECT * FROM retos ORDER BY id DESC");
+    res.json(rows);
+  } catch (error) {
+    console.error("Error al obtener retos:", error);
+    res.status(500).json({ error: "Error del servidor" });
   }
 };

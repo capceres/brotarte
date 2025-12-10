@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
+/* estilos personalizados */
+@theme {  
+  --color-main: #5B25D9;
+  --color-main-dark: #453C59;
+  --color-secondary: #DA8126;
+  --color-light-bg: #E7E4EF;
+}
 
 
 :root {
   width: 100%;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Akshar", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,6 +24,41 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* fuentes */
+@font-face {
+  font-family: "Akshar";
+  src: url("/src/assets/fonts/Akshar-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akshar";
+  src: url("/src/assets/fonts/Akshar-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akshar";
+  src: url("/src/assets/fonts/Akshar-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akshar";
+  src: url("/src/assets/fonts/Akshar-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akshar";
+  src: url("/src/assets/fonts/Akshar-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 
 a {
   font-weight: 500;
@@ -58,6 +100,28 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* animacion hojas */
+@keyframes fall {
+  0% {
+    transform: translateY(-20vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+/* media queries */
 
 @media (prefers-color-scheme: light) {
   :root {

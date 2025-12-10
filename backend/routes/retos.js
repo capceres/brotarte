@@ -1,9 +1,8 @@
 import express from "express";
 import multer from "multer";
-import { crearReto } from "../controllers/retosController.js";
+import { crearReto, obtenerRetos } from "../controllers/retosController.js";
 
 const router = express.Router();
-
 
 const storage = multer.diskStorage({
   destination: "uploads/",
@@ -14,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-
 router.post("/", upload.single("imagen"), crearReto);
+router.get("/", obtenerRetos);
 
 export default router;

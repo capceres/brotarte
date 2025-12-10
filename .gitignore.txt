@@ -37,6 +37,7 @@ backend/dist/
 backend/.env
 backend/.DS_Store
 backend/.eslintcache
+backend/uploads/*
 
 # Logs
 logs
