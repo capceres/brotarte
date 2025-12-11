@@ -65,8 +65,8 @@ export default function CrearReto() {
         <>
             <Header />
 
-            <div className="min-h-screen flex flex-col items-center pt-24 px-6">
-                <h1 className="text-2xl! font-semibold text-main-dark mb-8 mt-5">
+            <div className="min-h-170 flex flex-col items-center pt-24 px-6">
+                <h1>
                     Sube tu reto
                 </h1>
 
@@ -139,7 +139,7 @@ export default function CrearReto() {
                     </button>
                 </form>
                 {mensajeExito && (
-                    <p className="mt-4 text-center text-green-600 font-semibold">
+                    <p className="mt-4 text-center text-green-800 font-semibold">
                         {mensajeExito}
                     </p>
                 )}

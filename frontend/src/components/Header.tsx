@@ -27,6 +27,7 @@ export default function Header() {
           >
             Recursos creativos
           </Link>
+          
           {/* <Link
             to="/retos"
             className="text-main-dark! underline! hover:text-black! hover:no-underline! transition-colors"
