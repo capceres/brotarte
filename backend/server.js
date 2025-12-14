@@ -38,9 +38,7 @@ const data = JSON.parse(fs.readFileSync("./data/retos.json", "utf-8"));
 
 
 // se elige un elemento aleatorio de un array
-function getRandomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
-}
+import { getRandomItem } from "./utils/random.js";
 
 // datos de Generar reto
 app.get("/api/random", (req, res) => {
